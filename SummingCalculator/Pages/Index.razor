@@ -1,0 +1,46 @@
+﻿@page "/"
+
+<PageTitle>Summing calculator</PageTitle>
+Enter numbers<br/>
+<table class="sumsTable">
+    <tr>
+        <td class="inputCol">
+            <textarea style="box-sizing: border-box; height: 100%; width: 100%" @bind="InputValue" @oninput="OnInputTextChanged" />
+        </td>
+        <td class="currentValueCol">
+            <textarea style="box-sizing: border-box; height: 100%; width: 100%">@CurrentValue</textarea>
+        </td>
+        <td class="runningSumCom">
+            <textarea style="box-sizing: border-box; height: 100%; width: 100%">@RunningSum</textarea>
+        </td>
+    </tr>
+</table>
+
+<br/>Sum:<br/>
+<label>@TotalSum</label>
+
+
+
+<style>
+
+.inputCol {
+    height:60vh;
+    width:60%;
+}
+.currentValueCol{
+    height:60vh;
+    width:20%
+}
+.runningSumCom{
+    height:60vh;
+    width:20%
+}
+
+.sumsTable {
+    width: 90%
+}
+label {
+    font-size:20px;
+}
+
+</style>
